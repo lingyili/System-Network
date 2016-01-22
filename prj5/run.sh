@@ -1,0 +1,1 @@
+#!/bin/bashfor (( b=0; b<=9; b++ )) do	./cachesim -c 15 -s $b -b 6 -i ./traces/astar.tracedone;

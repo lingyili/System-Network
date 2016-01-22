@@ -1,0 +1,23 @@
+basic:  	Reads:                  5
+		Writes:                 8
+		TLB Hits:               6
+		Page Faults:            6
+		EMAT:          4615538.000000 ns
+
+everything 	Reads:                 11
+		Writes:                14
+		TLB Hits:               9
+		Page Faults:           13
+		EMAT:          4800164.000000 ns
+
+eviction	Reads:                  3
+		Writes:                13
+		TLB Hits:               1
+		Page Faults:           14
+		EMAT:          8750193.000000 ns
+
+tlb		Reads:                 10
+		Writes:                 5
+		TLB Hits:              12
+		Page Faults:            3
+		EMAT:          2000120.000000 ns

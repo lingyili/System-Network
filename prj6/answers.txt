@@ -1,0 +1,69 @@
+CS 2200 Summer 2015
+Project 6
+Name: Lingyi Li
+GT Number: 903091586
+
+Problem 1B
+----------
+Execution Time
+CPU 1:
+# of Context Switches: 99
+Total execution time: 67.6 s
+Total time spent in READY state: 389.9 s
+
+CPU 2:
+# of Context Switches: 113
+Total execution time: 35.8 s
+Total time spent in READY state: 83.1 s
+
+CPU 4:
+# of Context Switches: 183
+Total execution time: 33.4 s
+Total time spent in READY state: 0.2 s
+
+As CPU number increasing, the total execution time decrease. But it is not in linear relationship. In our project, it seems not need more than 2 CPUs to run. Though with more CPU, we can deal with more tasks, but much of CPU time is spent for waiting a thread to run. It will be more efficient if we have more processes running with more CPUs.
+
+Problem 2B
+----------
+time slices: 800ms
+# of Context Switches: 136
+Total execution time: 67.6 s
+Total time spent in READY state: 325.4 s
+
+time slices: 600ms
+# of Context Switches: 161
+Total execution time: 67.6 s
+Total time spent in READY state: 314.5 s
+
+time slices: 400ms
+# of Context Switches: 203
+Total execution time: 67.6 s
+Total time spent in READY state: 298.8 s
+
+time slices: 200ms
+# of Context Switches: 362
+Total execution time: 67.5 s
+Total time spent in READY state: 285.2 s
+
+As time slice increasing, the total time spent in READY state is decreased, while total execution time stay same. However, the number of context switch is increased. This is not a good choice in real OS,  because CPU has to store away the state of the registers and load the registers that were stored for the other thread, probability it will have to flush a cache to get different memory that the other thread wants to work with. It will cost more time.
+
+Problem 3B
+----------
+
+Static Priority:
+# of Context Switches: 140
+Total execution time: 67.9 s
+Total time spent in READY state: 160.7 s
+
+Round-Robin:
+# of Context Switches: 362
+Total execution time: 67.5 s
+Total time spent in READY state: 285.2 s
+
+FIFO:
+# of Context Switches: 99
+Total execution time: 67.6 s
+Total time spent in READY state: 389.9 s
+
+Static Priority has the lowest waiting time among three algorithms. So it is closet approximation of SJF. Because SJF is also a priority with time determining priority level.  That might because the provided processes in our project are near the SJF priority.
+
